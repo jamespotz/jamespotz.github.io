@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Montserrat|Source+Sans+Pro:400,400i,700,700i&display=swap');
+
+@tailwind base;
+@tailwind components;
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.btn-no-uppercase,
+.btn {
+  @apply text-gray-700 ml-0 inline-block relative;
+}
+
+.btn {
+  @apply uppercase;
+}
+
+.btn:hover::after,
+.btn-no-uppercase:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.btn::after,
+.btn-no-uppercase::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  @apply bg-gray-700;
+}
+
+.transform-origin-b-l {
+  transform-origin: bottom left;
+}
+
+.article-body {
+  @apply text-gray-800;
+}
+
+.article-body p {
+  @apply my-6 font-body leading-relaxed;
+}
+
+.transition {
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+
+/* Adjust the position of the line numbers */
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
+/**
+ * If you only want to use line numbering
+ */
+
+.gatsby-highlight {
+  background-color: #2d2d2d;
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding: 0;
+  padding-left: 2.8em;
+  overflow: initial;
+}
+
+.command-line-prompt>span:before {
+  color: #999;
+  content: " ";
+  display: block;
+  padding-right: 0.8em;
+}
+
+/* Prompt for all users */
+.command-line-prompt>span[data-user]:before {
+  content: "["attr(data-user) "@"attr(data-host) "] $";
+}
+
+/* Prompt for root */
+.command-line-prompt>span[data-user="root"]:before {
+  content: "["attr(data-user) "@"attr(data-host) "] #";
+}
+
+.command-line-prompt>span[data-prompt]:before {
+  content: attr(data-prompt);
+}
+
+.night {
+  background: #131017 !important;
+}
+
+.night * *[class*='text-gray-7'] {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.night * *[class*='text-gray-9'] {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.night * *[class*='text-gray-8'] {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.night * *[class*='text-gray-5'] {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@tailwind utilities;
