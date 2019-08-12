@@ -10,6 +10,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import "../css/default.css"
 import { ThemeConsumer } from "../context/ThemeContext"
+import { Emoji } from "./emoji"
 
 const getTheme = theme => {
   const klass = theme === "dark" ? "night" : "bg-white"
@@ -36,13 +37,15 @@ const Layout = ({ children }) => {
             <button
               className="absolute top-0 right-0 text-gray-500 m-2"
               onClick={state.changeTheme}
+              title="Toggle from light to dark"
             >
-              💡
+              <Emoji symbol="💡" label="light bulb" />
             </button>
             <main className="flex flex-col flex-grow ">{children}</main>
             <footer className="mt-auto text-gray-500 font-default leading-normal tracking-wide">
               © {new Date().getFullYear()}, Built with
-              <span className="text-red-500 mx-1">❤</span>, and{" "}
+              <Emoji symbol="❤" label="heart" className="text-red-500 mx-1" />,
+              and{" "}
               <a href="https://www.gatsbyjs.org" className="btn-no-uppercase">
                 Gatsby
               </a>

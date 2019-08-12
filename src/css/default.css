@@ -48,6 +48,29 @@
   @apply my-6 font-body leading-relaxed;
 }
 
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5 {
+  @apply font-display leading-relaxed text-gray-800 font-bold;
+}
+
+.article-body h2 {
+  @apply text-3xl;
+}
+
+.article-body h3 {
+  @apply text-2xl;
+}
+
+.article-body h4 {
+  @apply text-xl;
+}
+
+.article-body h5 {
+  @apply text-lg;
+}
+
 .transition {
   transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
@@ -115,6 +138,11 @@
 
 .night * *[class*='text-gray-5'] {
   color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.night .article-body p {
+  color: rgba(255, 255, 255, 0.7) !important;
+  @apply my-6 font-body leading-relaxed;
 }
 
 @tailwind utilities;

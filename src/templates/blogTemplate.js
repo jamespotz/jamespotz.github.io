@@ -20,7 +20,7 @@ const Template = ({
         <Link to="/blog" className="btn self-start">
           Back
         </Link>
-        <animated.div style={props}>
+        <animated.div style={props} className="mb-10">
           <h1 className="font-display text-4xl text-gray-900 leading-normal font-bold mt-6">
             {frontmatter.title}
           </h1>
