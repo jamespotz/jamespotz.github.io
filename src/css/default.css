@@ -19,14 +19,14 @@
 
 .btn:hover::after,
 .btn-no-uppercase:hover::after,
-.article-body a {
+.article-body a:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
 .btn::after,
 .btn-no-uppercase::after,
-.article-body a {
+.article-body a::after {
   content: '';
   width: 100%;
   height: 2px;
