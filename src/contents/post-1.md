@@ -51,7 +51,7 @@ $ curl -L https://get.oh-my.fish | fish
 
 You need to have rust setup to install starship
 
-### Installing Rusht
+### Installing Rust
 
 ```shell
 $ curl https://sh.rustup.rs -sSf | sh
