@@ -1,45 +1,181 @@
 import React from "react"
 import { Link } from "gatsby"
+import { useSpring, animated } from "react-spring"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
+import { Emoji } from "../components/emoji"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Work" />
-    <div className="flex flex-col my-auto">
-      <article className="font-default text-gray-700 w-full md:w-4/12 md:my-10">
-        <p className="text-xl font-normal leading-relaxed tracking-wide mb-4">
-          James is a developer skilled with Ruby on Rails, Javascript, ReactJs,
-          Databases, CSS, and HTML.
-        </p>
-        <p className="text-xl font-normal leading-relaxed tracking-wide mb-2">
-          James is fueled by his curiosity and his hunger for knowledge. He
-          considers himself a <span className="italic">'forever student'</span>{" "}
-          eager to learn and grow, and stay tuned with the latest technology
-          stack.
-        </p>
-      </article>
-      <ul>
-        <li className="mb-2">
-          <Link to="/blog/" className="btn">
-            article
-          </Link>
-        </li>
-        <li className="mb-2">
-          <Link to="/work/" className="btn">
-            work
-          </Link>
-        </li>
-        <li className="mb-2">
-          <a href="mailto:thepoltergeist23@gmail.com" className="btn">
-            get in touch
-          </a>
-        </li>
-      </ul>
-    </div>
-  </Layout>
-)
+const WorkPage = () => {
+  const props = useSpring({
+    to: { opacity: 1, transform: "translateX(0)" },
+    from: { opacity: 0.1, transform: "translateX(-100%)" },
+  })
 
-export default IndexPage
+  return (
+    <Layout>
+      <SEO title="Work Experience" />
+      <Link to="/" className="btn mb-4 self-start">
+        back
+      </Link>
+      <animated.div style={props} className="flex flex-col">
+        <article className="font-default text-gray-700 w-full md:w-4/12 md:my-10">
+          <div>
+            <h1 className="font-display leading-normal text-xl font-bold">
+              Maddington Consulting Inc. (2017 - Present)
+            </h1>
+            <small className="text-gray-600 leading-normal ">
+              <Emoji symbol="👨‍💻" label="man technology" /> Web Developer
+            </small>
+            <div class="flex my-4">
+              <div className="w-4/12 pr-3">
+                <h1 className="font-bold font-default leading-normal">
+                  <Emoji
+                    symbol="🌐"
+                    label="globe with meridians"
+                    className="mr-2"
+                  />
+                  E-Signature App (in-house)
+                </h1>
+              </div>
+              <div className="w-8/12">
+                <p>
+                  An app to sign and send documents and request signature from
+                  someone and collect it. Primary role as a Front-end and
+                  Backend Developer using
+                  <Emoji symbol="⚛" label="atom" className="mx-1" />
+                  ReactJs,
+                  <Emoji symbol="🕐" label="one o'clock" className="mx-1" />
+                  MomentJs,
+                  <Emoji
+                    symbol="🍃"
+                    label="leaf fluttering in the wind"
+                    className="mx-1"
+                  />
+                  TailwindCSS, Material-UI,
+                  <Emoji
+                    symbol="◆"
+                    label="large blue diamond"
+                    className="mx-1"
+                  />
+                  NodeJs, ExpressJS, MongoDB, PassportJs, JWT,{" "}
+                  <Emoji symbol="☕" label="hot beverage" className="mx-1" />
+                  Mocha and Chai.
+                </p>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <div className="w-4/12 pr-3">
+                <h1 className="font-bold font-default leading-normal">
+                  <Emoji
+                    symbol="🌐"
+                    label="globe with meridians"
+                    className="mr-2"
+                  />
+                  Seaside Summer Rentals
+                </h1>
+              </div>
+              <div className="w-8/12">
+                <p>
+                  Mid Cape Cod Vacation Rentals in Dennis and Yarmouth. Primary
+                  role as a Front-end Developer using
+                  <Emoji symbol="⚛" label="atom" className="mx-1" />
+                  ReactJs,
+                  <Emoji symbol="🕐" label="one o'clock" className="mx-1" />
+                  MomentJs,
+                  <Emoji symbol="📦" label="package" className="mx-1" />
+                  Webpack
+                </p>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <div className="w-4/12 pr-3">
+                <h1 className="font-bold font-default leading-normal">
+                  <Emoji
+                    symbol="🌐"
+                    label="globe with meridians"
+                    className="mr-2"
+                  />
+                  Vaycay365
+                </h1>
+              </div>
+              <div className="w-8/12">
+                <p>
+                  Cape Cod vacation homes with hotel luxuries. Primary role as a
+                  Front-end Developer using
+                  <Emoji symbol="⚛" label="atom" className="mx-1" />
+                  ReactJs,
+                  <Emoji symbol="🕐" label="one o'clock" className="mx-1" />
+                  MomentJs,
+                  <Emoji symbol="📦" label="package" className="mx-1" />
+                  Webpack
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-6">
+            <h1 className="font-display leading-normal text-xl font-bold">
+              Paramount Life & General Insurance Corp. (2014 - 2017)
+            </h1>
+            <small className="text-gray-600 leading-normal ">
+              <Emoji symbol="👨‍💻" label="man technology" /> Software Engineer
+            </small>
+            <div class="flex my-4">
+              <div className="w-4/12 pr-3">
+                <h1 className="font-bold font-default leading-normal">
+                  <Emoji
+                    symbol="🌐"
+                    label="globe with meridians"
+                    className="mr-2"
+                  />
+                  ParamountDirect
+                </h1>
+              </div>
+              <div className="w-8/12">
+                <p>
+                  A direct marketing arm of Paramount Life & General Insurance
+                  Corporation. Built with
+                  <Emoji symbol="💎" label="gem stone" className="mx-1" /> Ruby
+                  on Rails, jQuery,
+                  <Emoji symbol="🐘" label="elephant" className="mx-1" />
+                  PostgreSQL, Redis, Bootstrap 3,
+                  <Emoji symbol="📃" label="page with curl" className="mx-1" />
+                  HTML and
+                  <Emoji symbol="🛡" label="shield" className="mx-1" />
+                  CSS.
+                </p>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <div className="w-4/12 pr-3">
+                <h1 className="font-bold font-default leading-normal">
+                  <Emoji
+                    symbol="🌐"
+                    label="globe with meridians"
+                    className="mr-2"
+                  />
+                  CTPL
+                </h1>
+              </div>
+              <div className="w-8/12">
+                <p>
+                  CTPL is a car insurance application page. Built with
+                  <Emoji symbol="💎" label="gem stone" className="mx-1" /> Ruby
+                  on Rails, jQuery,
+                  <Emoji symbol="🐘" label="elephant" className="mx-1" />
+                  PostgreSQL, Redis, Bootstrap 3,
+                  <Emoji symbol="📃" label="page with curl" className="mx-1" />
+                  HTML and
+                  <Emoji symbol="🛡" label="shield" className="mx-1" />
+                  CSS.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </animated.div>
+    </Layout>
+  )
+}
+
+export default WorkPage

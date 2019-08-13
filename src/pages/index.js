@@ -5,6 +5,7 @@ import { useSpring, animated } from "react-spring"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Icon from "../components/icon"
 
 const IndexPage = () => {
   const props = useSpring({
@@ -22,8 +23,8 @@ const IndexPage = () => {
           alt="James Robert Rooke"
         >
           <p className="text-xl font-normal leading-relaxed tracking-wide mb-4">
-            James is a developer skilled with Ruby on Rails, Javascript,
-            ReactJs, Databases, CSS, and HTML.
+            James is a Software Developer skilled with Ruby on Rails,
+            Javascript, ReactJs, Databases, CSS, and HTML.
           </p>
           <p className="text-xl font-normal leading-relaxed tracking-wide mb-2">
             James is fueled by his curiosity and his hunger for knowledge. He
@@ -44,9 +45,42 @@ const IndexPage = () => {
             </Link>
           </li>
           <li className="mb-2">
+            <Link to="/projects/" className="btn">
+              personal projects
+            </Link>
+          </li>
+          <li className="mb-2">
             <a href="mailto:thepoltergeist23@gmail.com" className="btn">
               get in touch
             </a>
+          </li>
+          <li>
+            <ul className="flex">
+              <li className="mr-2">
+                <a href="https://dev.to/jamespotz">
+                  <Icon
+                    name={["fab", "dev"]}
+                    className="text-gray-700 text-2xl"
+                  />
+                </a>
+              </li>
+              <li className="mr-2">
+                <a href="https://github.com/jamespotz">
+                  <Icon
+                    name={["fab", "github"]}
+                    className="text-gray-700 text-2xl"
+                  />
+                </a>
+              </li>
+              <li className="mr-2">
+                <a href="https://facebook.com/jameslrooke">
+                  <Icon
+                    name={["fab", "facebook"]}
+                    className="text-gray-700 text-2xl"
+                  />
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
       </animated.div>

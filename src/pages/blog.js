@@ -5,7 +5,7 @@ import { animated, useSpring } from "react-spring"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
+const Blog = ({ data }) => {
   const props = useSpring({
     to: { opacity: 1, transform: "translateX(0)" },
     from: { opacity: 0.1, transform: "translateX(-100%)" },
@@ -13,17 +13,24 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Articles" />
-      <Link to="/" className="btn mb-4 self-start">
-        back
-      </Link>
+      <div>
+        <Link to="/" className="btn mb-4 self-start">
+          back
+        </Link>
+        <Link to="/tags" className="btn mb-4 self-start ml-2 text-gray-500">
+          <span className="text-purple-700">#</span> all tags
+        </Link>
+      </div>
       <animated.div style={props}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
             <Link to={node.frontmatter.path} className="flex my-4 items-center">
-              <span className="text-sm text-teal-500 font-default">
+              <span className="text-sm text-gray-500 font-default">
                 {node.frontmatter.date}
               </span>
-              <span className="text-gray-600 mx-3">|</span>
+              <span className="text-gray-600 ml-3 mr-2 border-l-2 border-purple-800">
+                &nbsp;
+              </span>
               <h1 className="btn-no-uppercase">{node.frontmatter.title} </h1>
             </Link>
           </div>
@@ -33,7 +40,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-export default IndexPage
+export default Blog
 
 export const query = graphql`
   query {
@@ -51,6 +58,7 @@ export const query = graphql`
             title
             date(formatString: "DD MMMM, YYYY")
             path
+            tags
           }
           excerpt
         }

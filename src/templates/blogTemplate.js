@@ -1,10 +1,11 @@
 import React from "react"
+import kebabCase from "lodash/kebabCase"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useSpring, animated } from "react-spring"
 
-const Template = ({
+const BlogTemplate = ({
   data, // this prop will be injected by the GraphQL query below.
 }) => {
   const props = useSpring({
@@ -24,6 +25,21 @@ const Template = ({
           <h1 className="font-display text-4xl text-gray-900 leading-normal font-bold mt-6">
             {frontmatter.title}
           </h1>
+          {frontmatter.tags ? (
+            <ul className="flex flex-wrap">
+              {frontmatter.tags.map(tag => (
+                <li key={`${tag}-tag`} className="mr-2">
+                  <Link
+                    to={`/tags/${kebabCase(tag)}/`}
+                    className="text-gray-600"
+                  >
+                    <span className="text-purple-700">#</span>
+                    {tag}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : null}
           <h2 className="font-default text-xs text-gray-500 tracking-wider leading-normal font-normal mb-6">
             {frontmatter.date}
           </h2>
@@ -37,7 +53,7 @@ const Template = ({
   )
 }
 
-export default Template
+export default BlogTemplate
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -47,6 +63,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
+        tags
       }
     }
   }
