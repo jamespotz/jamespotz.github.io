@@ -20,6 +20,19 @@ const ProjectsPage = () => {
         <animated.ul style={props}>
           <li className="flex items-center mb-2">
             <a
+              href="https://jamespotz.github.io/pokemon-league-registration/"
+              alt="Pokemon League Registration"
+              className="btn-no-uppercase"
+            >
+              Pokemon League Registration
+            </a>
+            <span className="text-lg font-default text-gray-800 ml-2 border-l-2 pl-2 border-purple-800">
+              A simple pokemon registration built with ReactJs, Lodash,
+              TailwindCSS, postCSS, Redux and React Hooks.
+            </span>
+          </li>
+          <li className="flex items-center mb-2">
+            <a
               href="https://npmjs.com/package/@jamespotz/react-simple-readmore"
               alt="@jamespotz/react-simple-readmore"
               className="btn-no-uppercase"
