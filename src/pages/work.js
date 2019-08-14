@@ -22,7 +22,7 @@ const WorkPage = () => {
         <article className="font-default text-gray-700 w-full md:w-4/12 md:my-10">
           <div>
             <h1 className="font-display leading-normal text-xl font-bold">
-              Maddington Consulting Inc. (2017 - Present)
+              Maddington Consulting Inc. (2017 - 2019)
             </h1>
             <small className="text-gray-600 leading-normal ">
               <Emoji symbol="👨‍💻" label="man technology" /> Web Developer
