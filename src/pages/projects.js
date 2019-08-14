@@ -5,7 +5,7 @@ import { useSpring, animated } from "react-spring"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Projects = () => {
+const ProjectsPage = () => {
   const props = useSpring({
     to: { opacity: 1, transform: "translateX(0)" },
     from: { opacity: 0.1, transform: "translateX(-100%)" },
@@ -85,4 +85,4 @@ const Projects = () => {
   )
 }
 
-export default Projects
+export default ProjectsPage

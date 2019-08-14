@@ -5,7 +5,7 @@ import { animated, useSpring } from "react-spring"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Blog = ({ data }) => {
+const BlogPage = ({ data }) => {
   const props = useSpring({
     to: { opacity: 1, transform: "translateX(0)" },
     from: { opacity: 0.1, transform: "translateX(-100%)" },
@@ -40,7 +40,7 @@ const Blog = ({ data }) => {
   )
 }
 
-export default Blog
+export default BlogPage
 
 export const query = graphql`
   query {

@@ -6,7 +6,7 @@ import kebabCase from "lodash/kebabCase"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const Tags = ({ data }) => {
+const TagsPage = ({ data }) => {
   const allTags = data.allMarkdownRemark.group
   const props = useSpring({
     to: { opacity: 1, transform: "translateX(0)" },
@@ -42,7 +42,7 @@ const Tags = ({ data }) => {
   )
 }
 
-export default Tags
+export default TagsPage
 
 export const pageQuery = graphql`
   query {
