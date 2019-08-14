@@ -46,7 +46,7 @@ const WorkPage = () => {
                   <Emoji symbol="⚛" label="atom" className="mx-1" />
                   ReactJs,
                   <Emoji symbol="🕐" label="one o'clock" className="mx-1" />
-                  MomentJs,
+                  MomentJs, Axios,
                   <Emoji
                     symbol="🍃"
                     label="leaf fluttering in the wind"
@@ -58,7 +58,7 @@ const WorkPage = () => {
                     label="large blue diamond"
                     className="mx-1"
                   />
-                  NodeJs, ExpressJS, MongoDB, PassportJs, JWT,{" "}
+                  NodeJs, ExpressJS, MongoDB, PassportJs, JWT,
                   <Emoji symbol="☕" label="hot beverage" className="mx-1" />
                   Mocha and Chai.
                 </p>
@@ -109,6 +109,29 @@ const WorkPage = () => {
                   MomentJs,
                   <Emoji symbol="📦" label="package" className="mx-1" />
                   Webpack
+                </p>
+              </div>
+            </div>
+            <div class="flex mb-4">
+              <div className="w-4/12 pr-3">
+                <h1 className="font-bold font-default leading-normal">
+                  <Emoji
+                    symbol="🌐"
+                    label="globe with meridians"
+                    className="mr-2"
+                  />
+                  Vaycay365 services
+                </h1>
+              </div>
+              <div className="w-8/12">
+                <p>
+                  Vaycay365 services page and checkout. Primary role as a
+                  Front-end Developer using
+                  <Emoji symbol="⚛" label="atom" className="mx-1" />
+                  ReactJs,
+                  <Emoji symbol="🕐" label="one o'clock" className="mx-1" />
+                  MomentJs, Axios, Material-Ui, Bootstrap, Redux, and React
+                  Router.
                 </p>
               </div>
             </div>

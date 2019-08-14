@@ -67,6 +67,14 @@ const SkillsPage = () => {
             <Progress value={60} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-1/4 font-default pr-2">Mocha</div>
+            <Progress value={60} />
+          </div>
+          <div className="flex mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-1/4 font-default pr-2">Rspec</div>
+            <Progress value={65} />
+          </div>
+          <div className="flex mb-3 flex-col md:flex-row md:items-center">
             <div className="w-1/4 font-default pr-2">MongoDB</div>
             <Progress value={50} />
           </div>
