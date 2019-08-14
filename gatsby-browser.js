@@ -14,8 +14,9 @@ import "prismjs/plugins/command-line/prism-command-line.css"
 
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { fab } from "@fortawesome/free-brands-svg-icons"
+import { faAdjust } from "@fortawesome/free-solid-svg-icons"
 
-library.add(fab)
+library.add(fab, faAdjust)
 export const wrapRootElement = ({ element }) => (
   <ThemeProvider>{element}</ThemeProvider>
 )

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Montserrat|Source+Sans+Pro:400,400i,700,700i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Merriweather:400,700,900|Montserrat|Source+Sans+Pro:400,400i,700,700i&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -27,7 +27,7 @@
 .btn::after,
 .btn-no-uppercase::after,
 .article-body a::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   position: absolute;
@@ -50,7 +50,6 @@
 .article-body p {
   @apply my-6 font-body leading-relaxed;
 }
-
 
 .article-body h2,
 .article-body h3,
@@ -79,7 +78,6 @@
   transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }
 
-
 /* Adjust the position of the line numbers */
 .gatsby-highlight pre[class*="language-"].line-numbers {
   padding-left: 2.8em;
@@ -103,7 +101,7 @@
   overflow: initial;
 }
 
-.command-line-prompt>span:before {
+.command-line-prompt > span:before {
   color: #999;
   content: " ";
   display: block;
@@ -111,36 +109,45 @@
 }
 
 /* Prompt for all users */
-.command-line-prompt>span[data-user]:before {
-  content: "["attr(data-user) "@"attr(data-host) "] $";
+.command-line-prompt > span[data-user]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] $";
 }
 
 /* Prompt for root */
-.command-line-prompt>span[data-user="root"]:before {
-  content: "["attr(data-user) "@"attr(data-host) "] #";
+.command-line-prompt > span[data-user="root"]:before {
+  content: "[" attr(data-user) "@" attr(data-host) "] #";
 }
 
-.command-line-prompt>span[data-prompt]:before {
+.command-line-prompt > span[data-prompt]:before {
   content: attr(data-prompt);
 }
 
+.social-link {
+  @apply text-2xl text-gray-900;
+}
+
+.social-link:hover {
+  @apply text-gray-800;
+}
+
+/* Night Css */
 .night {
   background: #131017 !important;
 }
 
-.night * *[class*='text-gray-7'] {
+.night * *[class*="text-gray-7"] {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-.night * *[class*='text-gray-9'] {
+.night * *[class*="text-gray-9"] {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-.night * *[class*='text-gray-8'] {
+.night * *[class*="text-gray-8"] {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-.night * *[class*='text-gray-5'] {
+.night * *[class*="text-gray-5"] {
   color: rgba(255, 255, 255, 0.5) !important;
 }
 
@@ -156,6 +163,14 @@
 
 .night .devto-badge:hover {
   filter: invert(95%);
+}
+
+.night .social-link {
+  @apply text-white;
+}
+
+.night .social-link:hover {
+  @apply text-gray-300;
 }
 
 @tailwind utilities;

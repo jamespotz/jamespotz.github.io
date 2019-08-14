@@ -1,5 +1,4 @@
 import React from "react"
-import kebabCase from "lodash/kebabCase"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import { useSpring, animated } from "react-spring"

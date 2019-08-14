@@ -17,7 +17,7 @@ const IndexPage = () => {
     <Layout>
       <SEO title="James Robert Rooke" />
       <animated.div style={props} className="flex flex-col my-auto">
-        <Image className="h-20 w-20 rounded-full border border-transparent hover:shadow hover:border-teal-500 transition cursor-pointer" />
+        <Image className="h-20 w-20 rounded-full border-2 border-transparent hover:shadow-lg hover:border-purple-500 transition cursor-pointer" />
         <article
           className="font-default text-gray-700 w-full md:w-4/12 md:my-10"
           alt="James Robert Rooke"
@@ -57,27 +57,21 @@ const IndexPage = () => {
           <li>
             <ul className="flex">
               <li className="mr-2">
-                <a href="https://dev.to/jamespotz">
-                  <Icon
-                    name={["fab", "dev"]}
-                    className="text-gray-700 text-2xl"
-                  />
+                <a href="https://dev.to/jamespotz" className="social-link">
+                  <Icon name={["fab", "dev"]} />
                 </a>
               </li>
               <li className="mr-2">
-                <a href="https://github.com/jamespotz">
-                  <Icon
-                    name={["fab", "github"]}
-                    className="text-gray-700 text-2xl"
-                  />
+                <a href="https://github.com/jamespotz" className="social-link">
+                  <Icon name={["fab", "github"]} />
                 </a>
               </li>
               <li className="mr-2">
-                <a href="https://facebook.com/jameslrooke">
-                  <Icon
-                    name={["fab", "facebook"]}
-                    className="text-gray-700 text-2xl"
-                  />
+                <a
+                  href="https://facebook.com/jameslrooke"
+                  className="social-link"
+                >
+                  <Icon name={["fab", "facebook"]} />
                 </a>
               </li>
             </ul>

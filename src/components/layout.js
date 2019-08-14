@@ -11,11 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../css/default.css"
 import { ThemeConsumer } from "../context/ThemeContext"
 import { Emoji } from "./emoji"
-
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { faGithub, faDev, faFacebook } from "@fortawesome/free-brands-svg-icons"
-
-library.add(faDev, faGithub, faFacebook)
+import Icon from "./icon"
 
 const getTheme = theme => {
   const klass = theme === "dark" ? "night" : "bg-white"
@@ -44,7 +40,7 @@ const Layout = ({ children }) => {
               onClick={state.changeTheme}
               title="Toggle from light to dark"
             >
-              <Emoji symbol="🌓" label="first quarter moon" />
+              <Icon name="adjust" className="text-xl" />
             </button>
             <main className="flex flex-col flex-grow ">{children}</main>
             <footer className="mt-auto text-gray-500 font-default leading-normal tracking-wide">
