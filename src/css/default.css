@@ -130,6 +130,23 @@
   @apply text-gray-800;
 }
 
+.progress-bar {
+  @apply relative w-full h-4 border border-transparent rounded-lg bg-gray-300 block;
+  padding: 0.25rem;
+}
+
+.progress-bar > span {
+  @apply h-full relative overflow-hidden block;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-image: linear-gradient(to right, #131017, #553c9a);
+}
+
+.progress-bar > span.full {
+  border-radius: 1rem;
+}
 /* Night Css */
 .night {
   background: #131017 !important;

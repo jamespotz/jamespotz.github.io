@@ -43,6 +43,42 @@ const Projects = () => {
               converting image's to base64.
             </span>
           </li>
+          <li className="flex items-center mb-2">
+            <a
+              href="https://github.com/jamespotz/pomodoro-react"
+              alt="Pomodoro Timer"
+              className="btn-no-uppercase"
+            >
+              Pomodoro Timer
+            </a>
+            <span className="text-lg font-default text-gray-800 ml-2 border-l-2 pl-2 border-purple-800">
+              Pomodoro Timer built with React and Electron
+            </span>
+          </li>
+          <li className="flex items-center mb-2">
+            <a
+              href="https://github.com/jamespotz/rails_svg_tag_helper"
+              alt="Rails SVG tag helper"
+              className="btn-no-uppercase"
+            >
+              Rails SVG tag helper
+            </a>
+            <span className="text-lg font-default text-gray-800 ml-2 border-l-2 pl-2 border-purple-800">
+              A simple Rails helper for displaying SVG files.
+            </span>
+          </li>
+          <li className="flex items-center mb-2">
+            <a
+              href="https://github.com/jamespotz/simple_calendar"
+              alt="Simple Ruby Calendar"
+              className="btn-no-uppercase"
+            >
+              Simple Ruby Calendar
+            </a>
+            <span className="text-lg font-default text-gray-800 ml-2 border-l-2 pl-2 border-purple-800">
+              A simple ruby library for creating calenar in Rails views.
+            </span>
+          </li>
         </animated.ul>
       </div>
     </Layout>

@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Icon from "../components/icon"
+import Progress from "../components/progress"
 
 const IndexPage = () => {
   const props = useSpring({
@@ -37,6 +38,11 @@ const IndexPage = () => {
           <li className="mb-2">
             <Link to="/blog/" className="btn">
               article
+            </Link>
+          </li>
+          <li className="mb-2">
+            <Link to="/skills/" className="btn">
+              skills
             </Link>
           </li>
           <li className="mb-2">
