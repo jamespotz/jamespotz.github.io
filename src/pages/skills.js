@@ -23,75 +23,91 @@ const SkillsPage = () => {
             Skills
           </h2>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Ruby</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">Ruby</div>
             <Progress value={80} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Javascript</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              Javascript
+            </div>
             <Progress value={80} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">HTML</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">HTML</div>
             <Progress value={80} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">CSS</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">CSS</div>
             <Progress value={80} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Ruby on Rails</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              Ruby on Rails
+            </div>
             <Progress value={80} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Bootstrap</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              Bootstrap
+            </div>
             <Progress value={65} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">ReactJs</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">ReactJs</div>
             <Progress value={70} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Redux</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">Redux</div>
             <Progress value={60} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">TailwindCSS</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              TailwindCSS
+            </div>
             <Progress value={70} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">NodeJs</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">NodeJs</div>
             <Progress value={60} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">ExpressJs</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              ExpressJs
+            </div>
             <Progress value={60} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Mocha</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">Mocha</div>
             <Progress value={60} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Rspec</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">Rspec</div>
             <Progress value={65} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">MongoDB</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">MongoDB</div>
             <Progress value={50} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">PostgreSQL</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              PostgreSQL
+            </div>
             <Progress value={50} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">MySQL</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">MySQL</div>
             <Progress value={50} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Git/Bitbucket</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              Git/Bitbucket
+            </div>
             <Progress value={70} />
           </div>
           <div className="flex mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-1/4 font-default pr-2">Agile Methodology</div>
+            <div className="w-1/4 font-default pr-2 text-gray-700">
+              Agile Methodology
+            </div>
             <Progress value={70} />
           </div>
         </animated.div>

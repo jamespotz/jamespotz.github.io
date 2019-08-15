@@ -3,6 +3,20 @@
 @tailwind base;
 @tailwind components;
 
+button:hover,
+button:focus {
+  outline: none;
+}
+
+.avatar {
+  @apply h-20 w-20 rounded-full relative overflow-hidden;
+
+  & .avatar-border {
+    @apply absolute top-0 left-0;
+    z-index: 1;
+  }
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -45,33 +59,33 @@
 
 .article-body {
   @apply text-gray-800;
-}
 
-.article-body p {
-  @apply my-6 font-body leading-relaxed;
-}
+  & p {
+    @apply my-6 font-body leading-relaxed;
+  }
 
-.article-body h2,
-.article-body h3,
-.article-body h4,
-.article-body h5 {
-  @apply font-display leading-relaxed text-gray-800 font-bold;
-}
+  & h2,
+  & h3,
+  & h4,
+  & h5 {
+    @apply font-display leading-relaxed text-gray-800 font-bold;
+  }
 
-.article-body h2 {
-  @apply text-3xl;
-}
+  & h2 {
+    @apply text-3xl;
+  }
 
-.article-body h3 {
-  @apply text-2xl;
-}
+  & h3 {
+    @apply text-2xl;
+  }
 
-.article-body h4 {
-  @apply text-xl;
-}
+  & h4 {
+    @apply text-xl;
+  }
 
-.article-body h5 {
-  @apply text-lg;
+  & h5 {
+    @apply text-lg;
+  }
 }
 
 .transition {
@@ -101,7 +115,7 @@
   overflow: initial;
 }
 
-.command-line-prompt > span:before {
+.command-line-prompt>span:before {
   color: #999;
   content: " ";
   display: block;
@@ -109,85 +123,114 @@
 }
 
 /* Prompt for all users */
-.command-line-prompt > span[data-user]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] $";
+.command-line-prompt>span[data-user]:before {
+  content: "["attr(data-user) "@"attr(data-host) "] $";
 }
 
 /* Prompt for root */
-.command-line-prompt > span[data-user="root"]:before {
-  content: "[" attr(data-user) "@" attr(data-host) "] #";
+.command-line-prompt>span[data-user="root"]:before {
+  content: "["attr(data-user) "@"attr(data-host) "] #";
 }
 
-.command-line-prompt > span[data-prompt]:before {
+.command-line-prompt>span[data-prompt]:before {
   content: attr(data-prompt);
 }
 
 .social-link {
   @apply text-2xl text-gray-900;
-}
 
-.social-link:hover {
-  @apply text-gray-800;
+  &:hover {
+    @apply text-gray-800;
+  }
 }
 
 .progress-bar {
   @apply relative w-full h-4 border border-transparent rounded-lg bg-gray-300 block;
   padding: 0.25rem;
+
+  &>span {
+    @apply h-full relative overflow-hidden block;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#da1b60));
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+  }
+
+  &>span.full {
+    border-radius: 1rem;
+  }
 }
 
-.progress-bar > span {
-  @apply h-full relative overflow-hidden block;
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  background-image: linear-gradient(to right, #131017, #553c9a);
+.gradient-text {
+  background: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#da1b60));
+  background: linear-gradient(to right, #ff8a00, #da1b60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 
-.progress-bar > span.full {
-  border-radius: 1rem;
-}
 /* Night Css */
 .night {
   background: #131017 !important;
+
+
+  & * *[class*="text-gray-7"] {
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+
+  & * *[class*="text-gray-9"] {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  & * *[class*="text-gray-8"] {
+    color: rgba(255, 255, 255, 0.8) !important;
+  }
+
+  & * *[class*="text-gray-5"] {
+    color: rgba(255, 255, 255, 0.5) !important;
+  }
+
+  & .article-body p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    @apply my-6 font-body leading-relaxed;
+  }
+
+  & .devto-badge {
+    filter: invert(50%);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  & .devto-badge:hover {
+    filter: invert(95%);
+  }
+
+  & .social-link {
+    @apply text-white;
+  }
+
+  & .social-link:hover {
+    @apply text-gray-300;
+  }
+
+  & .article-body {
+
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6 {
+      @apply text-white;
+    }
+  }
+
+  & .progress-bar {
+    @apply bg-gray-900;
+  }
 }
 
-.night * *[class*="text-gray-7"] {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
 
-.night * *[class*="text-gray-9"] {
-  color: rgba(255, 255, 255, 0.9) !important;
-}
-
-.night * *[class*="text-gray-8"] {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.night * *[class*="text-gray-5"] {
-  color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.night .article-body p {
-  color: rgba(255, 255, 255, 0.7) !important;
-  @apply my-6 font-body leading-relaxed;
-}
-
-.night .devto-badge {
-  filter: invert(50%);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.night .devto-badge:hover {
-  filter: invert(95%);
-}
-
-.night .social-link {
-  @apply text-white;
-}
-
-.night .social-link:hover {
-  @apply text-gray-300;
-}
 
 @tailwind utilities;

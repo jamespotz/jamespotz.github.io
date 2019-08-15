@@ -9,7 +9,7 @@ tags: ["shell", "bash", "zsh"]
 
 The Z shell (Zsh) is a Unix shell that can be used as an interactive login shell and as a command interpreter for shell scripting. Zsh is an extended Bourne shell with a large number of improvements, including some features of Bash, ksh, and tcsh.
 
-I love zsh I' ve been using the shell for a long time and my favorite theme is powerlevel10k. It was great and all but I wanted something differen something less of a hassle to configure and has autosuggestions and syntax highlighting built in.
+I love zsh I' ve been using the shell for a long time and my favorite theme is powerlevel10k. It was great and all but I wanted something different something less of a hassle to configure and has autosuggestions and syntax highlighting built in. Then comes Fish.
 
 ## Fish
 

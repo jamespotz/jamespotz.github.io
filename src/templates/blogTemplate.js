@@ -22,7 +22,7 @@ const BlogTemplate = ({
           Back
         </Link>
         <animated.div style={props} className="mb-10">
-          <h1 className="font-display text-4xl text-gray-900 leading-normal font-bold mt-6">
+          <h1 className="font-display text-4xl text-gray-900 leading-normal font-bold mt-6 gradient-text self-start">
             {frontmatter.title}
           </h1>
           {frontmatter.tags ? (

@@ -8,7 +8,7 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
     <h1
-      className="text-6xl text-gray-700 font-display font-bold leading-normal"
+      className="text-6xl text-gray-700 font-display font-bold leading-normal gradient-text self-start"
       style={{
         transform: "perspective(600px) skew(-30deg)",
       }}

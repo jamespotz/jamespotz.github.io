@@ -7,6 +7,7 @@ import Image from "../components/image"
 import SEO from "../components/seo"
 import Icon from "../components/icon"
 import Progress from "../components/progress"
+import Avatar from "../components/avatar"
 
 const IndexPage = () => {
   const props = useSpring({
@@ -18,7 +19,9 @@ const IndexPage = () => {
     <Layout>
       <SEO title="James Robert Rooke" />
       <animated.div style={props} className="flex flex-col my-auto">
-        <Image className="h-20 w-20 rounded-full border-2 border-transparent hover:shadow-lg hover:border-purple-500 transition cursor-pointer" />
+        <Avatar>
+          <Image />
+        </Avatar>
         <article
           className="font-default text-gray-700 w-full md:w-4/12 md:my-10"
           alt="James Robert Rooke"
