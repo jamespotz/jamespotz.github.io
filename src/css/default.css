@@ -22,7 +22,7 @@ button:focus {
 }
 
 .btn-no-uppercase,
-.article-body a,
+.article-body a:not(.gatsby-resp-image-link),
 .btn {
   @apply text-gray-700 ml-0 inline-block relative;
 }
@@ -33,14 +33,14 @@ button:focus {
 
 .btn:hover::after,
 .btn-no-uppercase:hover::after,
-.article-body a:hover::after {
+.article-body a:not(.gatsby-resp-image-link):hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
 .btn::after,
 .btn-no-uppercase::after,
-.article-body a::after {
+.article-body a:not(.gatsby-resp-image-link)::after {
   content: "";
   width: 100%;
   height: 2px;
