@@ -40,7 +40,7 @@ const BlogTemplate = ({
               ))}
             </ul>
           ) : null}
-          <h2 className="font-default text-xs text-gray-500 tracking-wider leading-normal font-normal mb-6">
+          <h2 className="font-default text-xs text-gray-600 tracking-wider leading-normal font-normal mb-6">
             {frontmatter.date}
           </h2>
           <div

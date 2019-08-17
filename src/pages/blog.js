@@ -17,7 +17,7 @@ const BlogPage = ({ data }) => {
         <Link to="/" className="btn mb-4 self-start">
           back
         </Link>
-        <Link to="/tags" className="btn mb-4 self-start ml-2 text-gray-500">
+        <Link to="/tags" className="btn mb-4 self-start ml-2 text-gray-600">
           <span className="text-purple-700">#</span> all tags
         </Link>
       </div>
@@ -28,7 +28,7 @@ const BlogPage = ({ data }) => {
               to={node.frontmatter.path}
               className="flex flex-col lg:flex-row my-4 lg:items-center"
             >
-              <span className="text-sm text-gray-500 font-default order-3 lg:order-1">
+              <span className="text-sm text-gray-600 font-default order-3 lg:order-1">
                 {node.frontmatter.date}
               </span>
               <span className="text-gray-600 h-full ml-3 mr-2 lg:border-l-2 lg:border-purple-800 order-1 lg:order-2">

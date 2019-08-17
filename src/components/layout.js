@@ -36,14 +36,14 @@ const Layout = ({ children }) => {
         <>
           <div className={getTheme(state.theme)}>
             <button
-              className="absolute top-0 right-0 text-gray-500 m-2"
+              className="absolute top-0 right-0 text-gray-600 m-2"
               onClick={state.changeTheme}
               title="Toggle from light to dark"
             >
               <Icon name="adjust" className="text-xl" />
             </button>
             <main className="flex flex-col flex-grow ">{children}</main>
-            <footer className="mt-auto text-gray-500 font-default leading-normal tracking-wide">
+            <footer className="mt-auto text-gray-600 font-default leading-normal tracking-wide">
               © {new Date().getFullYear()}, Built with
               <Emoji symbol="❤" label="heart" className="text-red-500 mx-1" />,
               and{" "}

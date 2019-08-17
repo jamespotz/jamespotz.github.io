@@ -19,7 +19,7 @@ const TagsPage = ({ data }) => {
         <Link to="/" className="btn mb-4 self-start">
           back
         </Link>
-        <Link to="/blog" className="btn mb-4 self-start text-gray-500 ml-2">
+        <Link to="/blog" className="btn mb-4 self-start text-gray-600 ml-2">
           articles
         </Link>
       </div>
@@ -29,7 +29,7 @@ const TagsPage = ({ data }) => {
             <li key={tag.fieldValue} className="mb-2">
               <Link
                 to={`/tags/${kebabCase(tag.fieldValue)}/`}
-                className="btn-no-uppercase text-gray-500"
+                className="btn-no-uppercase text-gray-600"
               >
                 <span className="text-purple-700">#</span>
                 {tag.fieldValue} ({tag.totalCount})
