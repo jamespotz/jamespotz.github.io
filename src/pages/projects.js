@@ -114,7 +114,7 @@ const ProjectsPage = () => {
               />
             </a>
             <span className="text-lg font-default text-gray-800 lg:ml-2 lg:border-l-2 lg:pl-2 lg:border-purple-800">
-              A simple ruby library for creating calenar in Rails views.
+              A simple ruby library for creating calendar in Rails views.
             </span>
           </li>
         </animated.ul>
