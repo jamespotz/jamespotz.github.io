@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             >
               <Icon name="adjust" className="text-xl" />
             </button>
-            <main className="flex flex-col flex-grow ">{children}</main>
+            <main className="flex flex-col flex-grow">{children}</main>
             <footer className="mt-auto text-gray-600 font-default leading-normal tracking-wide">
               © {new Date().getFullYear()}, Built with
               <Emoji symbol="❤" label="heart" className="text-red-500 mx-1" />,

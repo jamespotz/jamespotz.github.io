@@ -3,6 +3,11 @@
 @tailwind base;
 @tailwind components;
 
+html,
+body {
+  @apply font-default;
+}
+
 button:hover,
 button:focus {
   outline: none;

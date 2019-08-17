@@ -34,8 +34,8 @@ const BlogPage = ({ data }) => {
               <span className="text-gray-600 h-full ml-3 mr-2 lg:border-l-2 lg:border-purple-800 order-1 lg:order-2">
                 &nbsp;
               </span>
-              <h1 className="btn-no-uppercase order-2 lg:order-3">
-                {node.frontmatter.title}{" "}
+              <h1 className="btn-no-uppercase font-bold order-2 lg:order-3">
+                {node.frontmatter.title}
               </h1>
             </Link>
           </div>
