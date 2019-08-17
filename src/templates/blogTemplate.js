@@ -17,7 +17,7 @@ const BlogTemplate = ({
   return (
     <Layout>
       <SEO title={frontmatter.title} />
-      <article className="flex flex-col w-full md:w-5/12">
+      <article className="flex flex-col w-full md:w-10/12 lg:w-8/12 xl:w-5/12">
         <Link to="/blog" className="btn self-start">
           Back
         </Link>

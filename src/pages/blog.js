@@ -24,14 +24,19 @@ const BlogPage = ({ data }) => {
       <animated.div style={props}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
-            <Link to={node.frontmatter.path} className="flex my-4 items-center">
-              <span className="text-sm text-gray-500 font-default">
+            <Link
+              to={node.frontmatter.path}
+              className="flex flex-col lg:flex-row my-4 lg:items-center"
+            >
+              <span className="text-sm text-gray-500 font-default order-3 lg:order-1">
                 {node.frontmatter.date}
               </span>
-              <span className="text-gray-600 ml-3 mr-2 border-l-2 border-purple-800">
+              <span className="text-gray-600 h-full ml-3 mr-2 lg:border-l-2 lg:border-purple-800 order-1 lg:order-2">
                 &nbsp;
               </span>
-              <h1 className="btn-no-uppercase">{node.frontmatter.title} </h1>
+              <h1 className="btn-no-uppercase order-2 lg:order-3">
+                {node.frontmatter.title}{" "}
+              </h1>
             </Link>
           </div>
         ))}

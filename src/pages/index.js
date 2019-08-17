@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import Icon from "../components/icon"
-import Progress from "../components/progress"
 import Avatar from "../components/avatar"
 
 const IndexPage = () => {

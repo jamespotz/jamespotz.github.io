@@ -20,7 +20,7 @@ const getTheme = theme => {
 }
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
+  const _data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {

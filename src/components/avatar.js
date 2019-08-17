@@ -4,7 +4,7 @@ import BorderSvg from "../images/border.svg"
 const Avatar = ({ children }) => (
   <div className="avatar">
     {children}
-    <img src={BorderSvg} className="avatar-border" />
+    <img src={BorderSvg} className="avatar-border" alt="avatar" />
   </div>
 )
 
