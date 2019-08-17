@@ -19,6 +19,7 @@ Second, on your settings page look for 'Developer Settings' and the next page yo
 see a 'Generate new token' button.
 
 ![Personal Settings](./images/settings_sidebar.png)
+
 ![Developer Settings](./images/developer_settings.png)
 
 Finally, give the access token a name and select scopes of your token. Once done, you can now use your access token as your password and save it on a keyring.

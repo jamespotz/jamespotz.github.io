@@ -239,8 +239,30 @@ button:focus {
   & .progress-bar {
     @apply bg-gray-900;
   }
+
+  & .toggle-switch {
+    @apply bg-gray-700;
+  }
 }
 
+.toggle-switch {
+  @apply relative bg-gray-300 shadow-lg block;
+  width: 44px;
+  height: 22px;
+  border-radius: 22px;
 
+  & .slider {
+    @apply absolute rounded-full shadow-lg;
+    top: -1px;
+    width: 24px;
+    height: 24px;
+    transition: .5s ease-in-out;
+    background: linear-gradient(to right, #ff8a00, #da1b60);
+  }
+
+  & input:checked+.slider {
+    transform: translateX(100%);
+  }
+}
 
 @tailwind utilities;

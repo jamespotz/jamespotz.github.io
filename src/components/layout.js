@@ -11,12 +11,12 @@ import { useStaticQuery, graphql } from "gatsby"
 import "../css/default.css"
 import { ThemeConsumer } from "../context/ThemeContext"
 import { Emoji } from "./emoji"
-import Icon from "./icon"
+import ToggleBtn from "./toggle"
 
 const getTheme = theme => {
   const klass = theme === "dark" ? "night" : "bg-white"
 
-  return `flex min-h-screen flex-col w-full ${klass} antialiased p-2 md:p-4 lg:p-6`
+  return `flex min-h-screen flex-col w-full ${klass} antialiased p-3 md:p-4 lg:p-6`
 }
 
 const Layout = ({ children }) => {
@@ -35,13 +35,12 @@ const Layout = ({ children }) => {
       {state => (
         <>
           <div className={getTheme(state.theme)}>
-            <button
-              className="absolute top-0 right-0 text-gray-600 m-2"
-              onClick={state.changeTheme}
-              title="Toggle from light to dark"
-            >
-              <Icon name="adjust" className="text-xl" />
-            </button>
+            <div className="absolute top-0 right-0 text-gray-600 m-4">
+              <ToggleBtn
+                checked={state.theme === "dark" ? true : false}
+                onToggle={state.changeTheme}
+              />
+            </div>
             <main className="flex flex-col flex-grow">{children}</main>
             <footer className="mt-auto text-gray-600 font-default leading-normal tracking-wide">
               © {new Date().getFullYear()}, Built with

@@ -1,13 +1,19 @@
-import React, { createContext, useState } from "react"
+import React, { createContext, useState, useEffect } from "react"
 
-export const themes = ["light", "dark"]
-
-const ThemeContext = createContext(themes[0])
+const ThemeContext = createContext("light")
 
 export const ThemeProvider = props => {
   const [theme, setTheme] = useState("light")
 
-  const changeTheme = () => setTheme(theme === "dark" ? "light" : "dark")
+  useEffect(() => {
+    const localTheme = localStorage.getItem("jamespotz_theme")
+    setTheme(!!localTheme ? localTheme : "light")
+  }, [])
+
+  const changeTheme = value => {
+    localStorage.setItem("jamespotz_theme", value === true ? "dark" : "light")
+    setTheme(value === true ? "dark" : "light")
+  }
 
   return (
     <ThemeContext.Provider
