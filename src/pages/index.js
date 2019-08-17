@@ -65,12 +65,20 @@ const IndexPage = () => {
           <li>
             <ul className="flex">
               <li className="mr-2">
-                <a href="https://dev.to/jamespotz" className="social-link">
+                <a
+                  href="https://dev.to/jamespotz"
+                  className="social-link"
+                  aria-label="dev.to profile"
+                >
                   <Icon name={["fab", "dev"]} />
                 </a>
               </li>
               <li className="mr-2">
-                <a href="https://github.com/jamespotz" className="social-link">
+                <a
+                  href="https://github.com/jamespotz"
+                  className="social-link"
+                  aria-label="github profile"
+                >
                   <Icon name={["fab", "github"]} />
                 </a>
               </li>
@@ -78,6 +86,7 @@ const IndexPage = () => {
                 <a
                   href="https://facebook.com/jameslrooke"
                   className="social-link"
+                  aria-label="facebook profile"
                 >
                   <Icon name={["fab", "facebook"]} />
                 </a>
