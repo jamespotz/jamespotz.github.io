@@ -28,20 +28,22 @@ export const ThemeProvider = props => {
     })
   }
 
+  if (!themeState.loaded) {
+    return <div />
+  }
+
   return (
-    themeState.loaded && (
-      <div className={themeState.theme}>
-        <ThemeContext.Provider
-          value={{
-            theme: themeState.theme,
-            checked: themeState.checked,
-            changeTheme,
-          }}
-        >
-          {props.children}
-        </ThemeContext.Provider>
-      </div>
-    )
+    <div className={themeState.theme}>
+      <ThemeContext.Provider
+        value={{
+          theme: themeState.theme,
+          checked: themeState.checked,
+          changeTheme,
+        }}
+      >
+        {props.children}
+      </ThemeContext.Provider>
+    </div>
   )
 }
 
