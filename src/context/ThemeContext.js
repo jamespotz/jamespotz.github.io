@@ -1,10 +1,14 @@
-import React, { createContext, useState, useEffect } from "react"
+import React, { createContext, useState, useEffect, useContext } from "react"
 
-const ThemeContext = createContext("light")
+const ThemeContext = createContext({
+  theme: "light",
+  checked: false,
+  loaded: false,
+})
 
-export const ThemeProvider = props => {
+const useEffectTheme = () => {
   const [themeState, setThemeState] = useState({
-    theme: "",
+    theme: "light",
     checked: false,
     loaded: false,
   })
@@ -18,6 +22,16 @@ export const ThemeProvider = props => {
     })
   }, [])
 
+  return [themeState, setThemeState]
+}
+
+export const ThemeProvider = props => {
+  const [themeState, setThemeState] = useEffectTheme()
+
+  if (!themeState.loaded) {
+    return <div />
+  }
+
   const changeTheme = value => {
     const theme = value === true ? "dark" : "light"
     localStorage.setItem("jamespotz_theme", theme)
@@ -28,12 +42,8 @@ export const ThemeProvider = props => {
     })
   }
 
-  if (!themeState.loaded) {
-    return <div />
-  }
-
   return (
-    <div className={themeState.theme}>
+    <div className={`transition-ease-in ${themeState.theme}`}>
       <ThemeContext.Provider
         value={{
           theme: themeState.theme,
@@ -47,4 +57,5 @@ export const ThemeProvider = props => {
   )
 }
 
+export const useTheme = () => useContext(ThemeContext)
 export const ThemeConsumer = ThemeContext.Consumer
