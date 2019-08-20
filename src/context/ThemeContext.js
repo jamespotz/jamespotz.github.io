@@ -3,33 +3,45 @@ import React, { createContext, useState, useEffect } from "react"
 const ThemeContext = createContext("light")
 
 export const ThemeProvider = props => {
-  const [theme, setTheme] = useState("light")
-  const [checked, setChecked] = useState(false)
+  const [themeState, setThemeState] = useState({
+    theme: "",
+    checked: false,
+    loaded: false,
+  })
 
   useEffect(() => {
-    const localTheme = localStorage.getItem("jamespotz_theme")
-    if (!!localTheme) {
-      setTheme(localTheme)
-      setChecked(localTheme === "dark")
-    }
+    const theme = localStorage.getItem("jamespotz_theme")
+    setThemeState({
+      theme: theme === "dark" ? "dark" : "light",
+      checked: theme === "dark",
+      loaded: true,
+    })
   }, [])
 
   const changeTheme = value => {
-    localStorage.setItem("jamespotz_theme", value === true ? "dark" : "light")
-    setTheme(value === true ? "dark" : "light")
-    setChecked(value)
+    const theme = value === true ? "dark" : "light"
+    localStorage.setItem("jamespotz_theme", theme)
+    setThemeState({
+      theme,
+      checked: value,
+      loaded: true,
+    })
   }
 
   return (
-    <ThemeContext.Provider
-      value={{
-        theme,
-        checked,
-        changeTheme,
-      }}
-    >
-      {props.children}
-    </ThemeContext.Provider>
+    themeState.loaded && (
+      <div className={themeState.theme}>
+        <ThemeContext.Provider
+          value={{
+            theme: themeState.theme,
+            checked: themeState.checked,
+            changeTheme,
+          }}
+        >
+          {props.children}
+        </ThemeContext.Provider>
+      </div>
+    )
   )
 }
 

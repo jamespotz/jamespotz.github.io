@@ -13,12 +13,6 @@ import { ThemeConsumer } from "../context/ThemeContext"
 import { Emoji } from "./emoji"
 import ToggleBtn from "./toggle"
 
-const getTheme = theme => {
-  const klass = theme === "dark" ? "night" : "bg-white"
-
-  return `flex min-h-screen flex-col w-full ${klass} antialiased p-3 md:p-4 lg:p-6 transition-ease-in`
-}
-
 const Layout = ({ children }) => {
   const _data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -32,9 +26,9 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeConsumer>
-      {({ theme, checked, changeTheme }) => (
+      {({ checked, changeTheme }) => (
         <>
-          <div className={getTheme(theme)}>
+          <div className="flex min-h-screen flex-col w-full antialiased p-3 md:p-4 lg:p-6">
             <div className="absolute top-0 right-0 text-gray-600 m-4">
               <ToggleBtn checked={checked} onToggle={changeTheme} />
             </div>

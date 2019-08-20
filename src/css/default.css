@@ -13,6 +13,10 @@ button:focus {
   outline: none;
 }
 
+.light {
+  @apply bg-white;
+}
+
 .avatar {
   @apply h-20 w-20 rounded-full relative overflow-hidden;
 
@@ -199,7 +203,7 @@ button:focus {
 }
 
 /* Night Css */
-.night {
+.dark {
   background: #131017 !important;
 
   & * *[class*="text-gray-7"] {
