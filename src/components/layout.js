@@ -32,14 +32,11 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeConsumer>
-      {state => (
+      {({ theme, checked, changeTheme }) => (
         <>
-          <div className={getTheme(state.theme)}>
+          <div className={getTheme(theme)}>
             <div className="absolute top-0 right-0 text-gray-600 m-4">
-              <ToggleBtn
-                checked={state.theme === "dark" ? true : false}
-                onToggle={state.changeTheme}
-              />
+              <ToggleBtn checked={checked} onToggle={changeTheme} />
             </div>
             <main className="flex flex-col flex-grow">{children}</main>
             <footer className="mt-auto text-gray-600 font-default leading-normal tracking-wide">
