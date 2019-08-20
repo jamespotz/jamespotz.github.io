@@ -16,7 +16,7 @@ import ToggleBtn from "./toggle"
 const getTheme = theme => {
   const klass = theme === "dark" ? "night" : "bg-white"
 
-  return `flex min-h-screen flex-col w-full ${klass} antialiased p-3 md:p-4 lg:p-6`
+  return `flex min-h-screen flex-col w-full ${klass} antialiased p-3 md:p-4 lg:p-6 transition-ease-in`
 }
 
 const Layout = ({ children }) => {
