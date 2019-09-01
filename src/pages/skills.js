@@ -133,6 +133,30 @@ const SkillsPage = () => {
             </div>
             <Progress value={70} />
           </div>
+          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
+              GraphQL
+            </div>
+            <Progress value={10} />
+          </div>
+          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
+              Docker
+            </div>
+            <Progress value={30} />
+          </div>
+          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
+              Prisma
+            </div>
+            <Progress value={10} />
+          </div>
+          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
+              GatsbyJs
+            </div>
+            <Progress value={30} />
+          </div>
         </animated.div>
       </div>
     </Layout>
