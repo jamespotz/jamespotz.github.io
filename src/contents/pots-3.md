@@ -11,7 +11,7 @@ Docker is a tool designed to make it easier to create, deploy, and run applicati
 
 ### What is a Container?
 
-A container allow developer 's to package up everything needed to run an application: code, runtime, system tools, system libraries and settings.
+A container allows developers to package up everything needed to run an application: code, runtime, system tools, system libraries and settings.
 
 ### Installing Docker
 
