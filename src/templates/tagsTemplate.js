@@ -30,8 +30,19 @@ const TagsTemplate = ({
               const { title, path, date } = node.frontmatter
               return (
                 <li key={path}>
-                  <Link to={path} className="btn-no-uppercase">
-                    {title} ({date})
+                  <Link
+                    to={path}
+                    className="flex flex-col lg:flex-row my-4 lg:items-center"
+                  >
+                    <span className="text-sm text-gray-600 font-default order-3 lg:order-1">
+                      {date}
+                    </span>
+                    <span className="text-gray-600 h-full ml-3 mr-2 lg:border-l-2 lg:border-purple-800 order-1 lg:order-2">
+                      &nbsp;
+                    </span>
+                    <h1 className="btn-no-uppercase font-bold order-2 lg:order-3">
+                      {title}
+                    </h1>
                   </Link>
                 </li>
               )
