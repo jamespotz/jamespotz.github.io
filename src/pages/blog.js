@@ -17,7 +17,7 @@ const BlogPage = ({ data }) => {
         <Link to="/" className="btn mb-4 self-start">
           back
         </Link>
-        <Link to="/all-tags" className="btn mb-4 self-start ml-2 text-gray-600">
+        <Link to="/tags" className="btn mb-4 self-start ml-2 text-gray-600">
           <span className="text-purple-700">#</span> all tags
         </Link>
       </div>
