@@ -32,7 +32,7 @@ const BlogTemplate = ({
               {frontmatter.tags.map(tag => (
                 <li key={`${tag}-tag`} className="mr-2">
                   <Link
-                    to={`/tags/${kebabCase(tag)}/`}
+                    to={`/tag/${kebabCase(tag)}/`}
                     className="text-gray-600"
                   >
                     <span className="text-purple-700">#</span>

@@ -28,7 +28,7 @@ const TagsPage = ({ data }) => {
           {allTags.map(tag => (
             <li key={tag.fieldValue} className="mb-2">
               <Link
-                to={`/tags/${kebabCase(tag.fieldValue)}/`}
+                to={`/tag/${kebabCase(tag.fieldValue)}/`}
                 className="btn-no-uppercase text-gray-600"
               >
                 <span className="text-purple-700">#</span>
