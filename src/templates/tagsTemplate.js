@@ -12,8 +12,10 @@ const TagsTemplate = ({
     to: { opacity: 1, transform: "translateX(0)" },
     from: { opacity: 0.1, transform: "translateX(-100%)" },
   })
+
   const { allMarkdownRemark } = data
   const { edges } = allMarkdownRemark
+
   return (
     <Layout>
       <article className="flex flex-col w-full md:w-5/12">
@@ -66,7 +68,7 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMM, YYYY")
             title
             path
           }

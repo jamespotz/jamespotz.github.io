@@ -12,8 +12,10 @@ const BlogTemplate = ({
     to: { opacity: 1, transform: "translateX(0)" },
     from: { opacity: 0.1, transform: "translateX(-100%)" },
   })
+
   const { markdownRemark } = data // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark
+
   return (
     <Layout>
       <SEO title={frontmatter.title} />
