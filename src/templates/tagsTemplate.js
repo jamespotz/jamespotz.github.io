@@ -19,7 +19,7 @@ const TagsTemplate = ({
   return (
     <Layout>
       <article className="flex flex-col w-full md:w-5/12">
-        <Link to="/tags" className="btn self-start">
+        <Link to="/all-tags" className="btn self-start">
           Back
         </Link>
         <animated.div style={props} className="mb-10">
