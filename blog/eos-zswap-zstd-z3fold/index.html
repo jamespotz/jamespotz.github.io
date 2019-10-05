@@ -5,14 +5,14 @@
 <li>Fast Cpu with 3 cores or more.</li>
 <li>Low Ram - 4gb or less</li>
 </ul>
-<h1>ZSWAP</h1>
+<h2>ZSWAP</h2>
 <p>zswap is a Linux kernel feature that provides a compressed write-back cache for swapped pages, as a form of virtual memory compression. Instead of moving memory pages to a swap device when they are to be swapped out, zswap performs their compression and then stores them into a memory pool dynamically allocated in the system RAM. Later, writeback to the actual swap device is deferred or even completely avoided, resulting in a significantly reduced I/O for Linux systems that require swapping; the tradeoff is the need for additional CPU cycles to perform the compression.</p>
 <p>ZSWAP allows linux to make more efficient use of RAM as it virtually increase memory capacity, rather than slightly increased CPU usage to compress / unzip the swap pages.</p>
 <p>ZSWAP is present in the kernel but is never used, and to use it you must explicitly enable through <code class="language-text">GRUB_CMDLINE_LINUX_DEFAULT</code> at <code class="language-text">/etc/default/grub</code> file.</p>
-<h1>Zstandard (zstd)</h1>
+<h2>Zstandard (zstd)</h2>
 <p>Zstandard is a real-time compression algorithm, providing high compression ratios. It offers a very wide range of compression / speed trade-off, while being backed by a very fast decoder (see benchmarks below). It also offers a special mode for small data, called dictionary compression, and can create dictionaries from any sample set. Zstandard library is provided as open source software using a BSD license.std stands for ZStandard develop by facebook.</p>
 <p><a href="http://www.zstd.net/">http://zstd.net</a></p>
-<h1>Steps to enable ZSWAP</h1>
+<h3>Steps to enable ZSWAP</h3>
 <ol>
 <li>Edit grub as root</li>
 </ol>
@@ -25,7 +25,7 @@
 <li>Update grub</li>
 </ol>
 <div class="gatsby-highlight" data-language="shell"><pre style="counter-reset: linenumber NaN" class="language-shell line-numbers"><code class="language-shell">$ <span class="token function">sudo</span> <span class="token function">update-grub</span></code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span></span></pre></div>
-<h1>Steps to install zstd and Z3fold</h1>
+<h3>Steps to install zstd and Z3fold</h3>
 <ol>
 <li>Install checkinstall and build-essential</li>
 </ol>
