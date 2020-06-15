@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-import { useSpring, animated } from "react-spring"
+import React from 'react'
+import { Link } from 'gatsby'
+import { useSpring, animated } from 'react-spring'
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Progress from "../components/progress"
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Progress from '../components/progress'
 
 const SkillsPage = () => {
   const props = useSpring({
-    to: { opacity: 1, transform: "translateX(0)" },
-    from: { opacity: 0.1, transform: "translateX(-100%)" },
+    to: { opacity: 1, transform: 'translateX(0)' },
+    from: { opacity: 0.1, transform: 'translateX(-100%)' },
   })
   return (
     <Layout>
@@ -34,6 +34,18 @@ const SkillsPage = () => {
           <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
               Javascript
+            </div>
+            <Progress value={80} />
+          </div>
+          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
+              NodeJs
+            </div>
+            <Progress value={80} />
+          </div>
+          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
+            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
+              ExpressJs
             </div>
             <Progress value={80} />
           </div>
@@ -81,18 +93,6 @@ const SkillsPage = () => {
           </div>
           <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
-              NodeJs
-            </div>
-            <Progress value={60} />
-          </div>
-          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
-              ExpressJs
-            </div>
-            <Progress value={60} />
-          </div>
-          <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
-            <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
               Mocha
             </div>
             <Progress value={60} />
@@ -113,13 +113,13 @@ const SkillsPage = () => {
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
               PostgreSQL
             </div>
-            <Progress value={50} />
+            <Progress value={60} />
           </div>
           <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
               MySQL
             </div>
-            <Progress value={50} />
+            <Progress value={60} />
           </div>
           <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
@@ -137,7 +137,7 @@ const SkillsPage = () => {
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
               GraphQL
             </div>
-            <Progress value={10} />
+            <Progress value={60} />
           </div>
           <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
@@ -149,7 +149,7 @@ const SkillsPage = () => {
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
               Prisma
             </div>
-            <Progress value={10} />
+            <Progress value={60} />
           </div>
           <div className="flex flex-col md:flex-row mb-3 flex-col md:flex-row md:items-center">
             <div className="w-full md:w-1/4 font-default pr-2 text-gray-700">
