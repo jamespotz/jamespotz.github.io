@@ -22,8 +22,25 @@ const WorkPage = () => {
         <article className="font-default text-gray-700 w-full lg:w-3/4 xl:w-4/12 md:my-10">
           <div>
             <h1 className="font-display leading-normal text-xl font-bold">
-              Soko Labs <br />
+              Dev Partners <br />
               (2019 - Present)
+            </h1>
+            <small className="text-gray-600 leading-normal ">
+              <Emoji symbol="👨‍💻" label="man technology" /> Software Developer
+            </small>
+            <div className="flex flex-col md:flex-row my-4">
+              <div className="w-full mt-2 md:mt-0">
+                <p>
+                  Working at TechStyle Fashion Group as a Rapid Response
+                  Developer
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h1 className="font-display leading-normal text-xl font-bold">
+              Soko Labs <br />
+              (2019 - 2020)
             </h1>
             <small className="text-gray-600 leading-normal ">
               <Emoji symbol="👨‍💻" label="man technology" /> NodeJs Developer
