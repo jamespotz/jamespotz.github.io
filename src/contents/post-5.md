@@ -2,7 +2,7 @@
 path: "/blog/two-ways-to-use-usestate-setter"
 date: "2020-09-03"
 title: "Two ways to use React useState setter function"
-tags: ["react", "react-hooks", "javascript"]
+tags: ["react", "react-hooks", "javascript", "Today I learned"]
 ---
 
 ## 1. Providing a new value
