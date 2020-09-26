@@ -28,7 +28,7 @@ const BlogTemplate = ({
             {frontmatter.title}
           </h1>
           {frontmatter.tags ? (
-            <ul className="flex flex-wrap">
+            <ul className="flex flex-wrap list-none p-0">
               {frontmatter.tags.map(tag => (
                 <li key={`${tag}-tag`} className="mr-2">
                   <Link

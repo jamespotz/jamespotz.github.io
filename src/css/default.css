@@ -284,4 +284,13 @@ button:focus {
   }
 }
 
+ol, ul {
+  list-style: unset;
+  padding-inline-start: 25px;
+}
+
+ol {
+  list-style: decimal;
+}
+
 @tailwind utilities;
