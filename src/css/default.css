@@ -284,12 +284,12 @@ button:focus {
   }
 }
 
-ol, ul {
+article.blog ol, article.blog ul {
   list-style: unset;
   padding-inline-start: 25px;
 }
 
-ol {
+article.blog ol {
   list-style: decimal;
 }
 
