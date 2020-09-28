@@ -36,18 +36,18 @@ need later on with the nameservers above.</li>
 
 <span class="token comment"># This config will prevent wsl2 from overwritting the resolve.conf file everytime</span>
 <span class="token comment"># you start wsl2</span>
-<span class="token function">sudo</span> <span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
-[network]
-genearteResolvConf = false
-EOF</span> <span class="token operator">></span> /etc/wsl.conf
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span>EOF <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> -a /etc/wsl.conf
+<span class="token punctuation">[</span>network<span class="token punctuation">]</span>
+genearteResolvConf <span class="token operator">=</span> <span class="token boolean">false</span>
+EOF
 
-<span class="token function">sudo</span> <span class="token builtin class-name">echo</span> <span class="token operator">&lt;&lt;</span> <span class="token string">EOF
-nameserver 10.50... # The company DNS/nameserver from the command in step 1
-nameserver 10.50... # The company DNS/nameserver from the command in step 1
-nameserver 8.8.8.8
-nameserver 8.8.4.4
-search this.searchdomain.com # The search domain that we got from step 2
-EOF</span> <span class="token operator">></span> /etc/resolv.conf</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
+<span class="token function">cat</span> <span class="token operator">&lt;&lt;</span> EOF <span class="token operator">|</span> <span class="token function">sudo</span> <span class="token function">tee</span> -a /etc/resolv.conf
+nameserver <span class="token number">10.50</span><span class="token punctuation">..</span>. <span class="token comment"># The company DNS/nameserver from the command in step 1</span>
+nameserver <span class="token number">10.50</span><span class="token punctuation">..</span>. <span class="token comment"># The company DNS/nameserver from the command in step 1</span>
+nameserver <span class="token number">8.8</span>.8.8
+nameserver <span class="token number">8.8</span>.4.4
+search this.searchdomain.com <span class="token comment"># The search domain that we got from step 2</span>
+EOF</code><span aria-hidden="true" class="line-numbers-rows" style="white-space: normal; width: auto; left: 0;"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></pre></div>
 <ol start="4">
 <li>Change Cisco Anyconnect metric from default 1 to 6000 inside powershell</li>
 </ol>
