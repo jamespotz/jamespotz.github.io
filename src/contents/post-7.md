@@ -51,18 +51,18 @@ need later on with the nameservers above.
 
   # This config will prevent wsl2 from overwritting the resolve.conf file everytime
   # you start wsl2
-  sudo cat << EOF
+  cat <<EOF | sudo tee -a /etc/wsl.conf
   [network]
   genearteResolvConf = false
-  EOF > /etc/wsl.conf
+  EOF
 
-  sudo echo << EOF
+  cat << EOF | sudo tee -a /etc/resolv.conf
   nameserver 10.50... # The company DNS/nameserver from the command in step 1
   nameserver 10.50... # The company DNS/nameserver from the command in step 1
   nameserver 8.8.8.8
   nameserver 8.8.4.4
   search this.searchdomain.com # The search domain that we got from step 2
-  EOF > /etc/resolv.conf
+  EOF
   ```
 
 4. Change Cisco Anyconnect metric from default 1 to 6000 inside powershell
