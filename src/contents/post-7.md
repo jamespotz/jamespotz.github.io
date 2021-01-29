@@ -56,7 +56,7 @@ need later on with the nameservers above.
   genearteResolvConf = false
   EOF
 
-  cat << EOF | sudo tee -a /etc/resolv.conf
+  cat <<EOF | sudo tee -a /etc/resolv.conf
   nameserver 10.50... # The company DNS/nameserver from the command in step 1
   nameserver 10.50... # The company DNS/nameserver from the command in step 1
   nameserver 8.8.8.8

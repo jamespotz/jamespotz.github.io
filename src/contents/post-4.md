@@ -88,7 +88,7 @@ z3fold
 ```
 
 ```shell
-$ suod update-initramfs -u -k all
+$ sudo update-initramfs -u -k all
 ```
 
 5. Restart PC and verify ZSWAP if enabled
