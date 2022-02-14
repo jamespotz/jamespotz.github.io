@@ -23,61 +23,62 @@ W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/focal-backports/InRele
 W: Failed to fetch http://security.ubuntu.com/ubuntu/dists/focal-security/InRelease    Temporary failure resolving 'security.ubuntu.com'
 W: Some index files failed to download. They have been ignored, or old ones used instead.
 ```
+
 On wsl2 `sudo apt update` will fail when connected to Cisco Anyconnect VPN but without
 vpn it works fine. The problem is when you are connected to anyconnect, wsl fails to resolve
 the DNS.
 
-
 ## The solution
 
 1. Connect Cisco Anyconnect VPN, then open up powershell as Admin and run the following commands
-to get the all the available DNS/nameservers. Take note of the DNS/namservers will need later.
+   to get the all the available DNS/nameservers. Take note of the DNS/namservers will need later.
 
-  ```shell
-  Get-DnsClientServerAddress -AddressFamily IPv4 | Select-Object -ExpandProperty ServerAddresses
-  ```
+```shell
+Get-DnsClientServerAddress -AddressFamily IPv4 | Select-Object -ExpandProperty ServerAddresses
+```
 
 2. Then on the same powershell run the following. This will get the search domain that will
-need later on with the nameservers above.
+   need later on with the nameservers above.
 
-  ```shell
-  Get-DnsClientGlobalSetting | Select-Object -ExpandProperty SuffixSearchList
-  ```
+```shell
+Get-DnsClientGlobalSetting | Select-Object -ExpandProperty SuffixSearchList
+```
 
 3. Open up wsl, and run the following commands.
 
-  ```shell
-  sudo unlink /etc/resolv.conf # this will unlink the default wsl2 resolv.conf
+```shell
+sudo unlink /etc/resolv.conf # this will unlink the default wsl2 resolv.conf
 
-  # This config will prevent wsl2 from overwritting the resolve.conf file everytime
-  # you start wsl2
-  cat <<EOF | sudo tee -a /etc/wsl.conf
-  [network]
-  genearteResolvConf = false
-  EOF
+# This config will prevent wsl2 from overwritting the resolve.conf file everytime
+# you start wsl2
+cat <<EOF | sudo tee -a /etc/wsl.conf
+[network]
+generateResolvConf = false
+EOF
 
-  cat <<EOF | sudo tee -a /etc/resolv.conf
-  nameserver 10.50... # The company DNS/nameserver from the command in step 1
-  nameserver 10.50... # The company DNS/nameserver from the command in step 1
-  nameserver 8.8.8.8
-  nameserver 8.8.4.4
-  search this.searchdomain.com # The search domain that we got from step 2
-  EOF
-  ```
+cat <<EOF | sudo tee -a /etc/resolv.conf
+nameserver 10.50... # The company DNS/nameserver from the command in step 1
+nameserver 10.50... # The company DNS/nameserver from the command in step 1
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+search this.searchdomain.com # The search domain that we got from step 2
+EOF
+```
 
 4. Change Cisco Anyconnect metric from default 1 to 6000 inside powershell
 
-  ```shell
-  Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"} | Set-NetIPInterface -InterfaceMetric 6000
-  ```
+```shell
+Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"} | Set-NetIPInterface -InterfaceMetric 6000
+```
 
 5. Restart wsl2 on the same elevated powershell, then you can open up wsl2 and it should connect to
-the internet.
+   the internet.
 
-  ```shell
-  Restart-Service LxssManager
-  ```
+```shell
+Restart-Service LxssManager
+```
 
 ### References
+
 [https://github.com/microsoft/WSL/issues/5068](https://github.com/microsoft/WSL/issues/5068)
 [https://github.com/microsoft/WSL/issues/4277](https://github.com/microsoft/WSL/issues/4277)
